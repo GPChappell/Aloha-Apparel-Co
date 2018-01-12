@@ -137,7 +137,7 @@ header {
 
 .gallery-item:nth-of-type(5n+1) {
   background: green;
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
 }
 
 .mens {
