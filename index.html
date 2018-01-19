@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
-  <script src="js/flickity.pkgd.min.js"></script>
+  <link rel="icon" type="image/ico" href="images/favicon.ico">
   <link rel="stylesheet" href="css/html5reset-1.6.1.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/flickity.css" media="screen">
@@ -14,34 +15,37 @@
 </head>
 <body>
   <!-- NAVIGATION -->
-  <nav>
-    <a class="aloha-logo" href=""><img src="images/aloha-logo.svg" alt="Aloha Apparel Co Logo"></a>
-    <a class="shopping-cart-icon" href=""><img src="images/cart-icon.svg" alt="Shopping Cart Button"></a>
+  <nav class="site-nav">
+    <div class="site-nav__logo-wrapper">
+      <a class="aloha-logo" href=""><img src="images/aloha-logo.svg" alt="Aloha Apparel Co Logo"></a>
+    </div>
+    <div class="site-nav__shopping-cart-icon-wrapper">
+      <div class="shopping-cart-count-bubble"></div>
+      <a class="shopping-cart-icon" href=""><img src="images/cart-icon.svg" alt="Shopping Cart Button"></a>
+    </div>
     <!-- Navigation Links -->
     <ul class="nav-links">
-      <li><a href="">ABOUT</a></li>
-      <li><a href="">SHOP</a></li>
-      <li><a href="">FEATURED</a></li>
-      <li><a href="">UPDATES</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#shop">SHOP</a></li>
+      <li><a href="#featured">FEATURED</a></li>
+      <li><a href="#updates">UPDATES</a></li>
     </ul>
   </nav>
   <!-- HEADER -->
-  <header class="hero-banner navbar-offset">
+  <header class="hero-banner">
     <div>
       <p>NEW COLLECTION</p>
       <h2>Spring/Summer 2018</h2>
     </div>
   </header>
   <!-- PRODUCT CATEGORY -->
-  <section>
+  <section id="about">
     <div class="gallery-title-area  desktop-text-wrapper">
-        <h1><span class="italic-heading">Hand-Crafted</span> Styles</h1>
+        <h1><span class="italic-heading">Hand-Crafted</span><strong> Styles</strong></h1>
         <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
     </div>
     <!-- Product Tile Gallery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/index.js"></script> -->
-    <div class="gallery-container">
+    <div id="shop" class="gallery-container">
       <div class="gallery-item mens"><a href="">MEN'S</a></div>
       <div class="gallery-item trends"><a href="">TRENDS</a></div>
       <div class="gallery-item glasses"><a href="">GLASSES</a></div>
@@ -51,77 +55,86 @@
     </div>
   </section>
   <!-- PRODUCT CAROUSEL -->
-  <section class="product-carousel">
+  <section id="featured" class="product-carousel">
     <div class="carousel-title-area">
-      <h1><span class="italic-heading">Most-Loved</span> Products</h1>
+      <h1><span class="italic-heading">Most-Loved</span> <strong>Products</strong></h1>
     </div>
-      <!-- Product Carousel: JQuery Plugin - Flickity -->
-    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+    <!-- Product Carousel: JQuery Plugin - Flickity -->
+    <!-- <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'> -->
+    <div class="main-carousel">
       <div class="carousel-cell">
         <img src="images/checked-stretch-dress.jpg" alt="Red Checked Stretch Dress">
-        <p>Dresses</p>
-        <h3>Checked Stretch Dress</h3>
-        <p>$129.00</p>
+        <p class="product-category">Dresses</p>
+        <h3 class="product-name">Checked Stretch Dress</h3>
+        <p class="product-price">$129.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/blue-hipster-backpack.jpg" alt="Blue Hipster Backpack">
-        <p>Bags</p>
-        <h3>Blue Hipster Backpack</h3>
-        <p>$69.00</p>
+        <p class="product-category">Bags</p>
+        <h3 class="product-name">Blue Hipster Backpack</h3>
+        <p class="product-price">$69.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/denim-overall-shorts.jpg" alt="Denim Overall Shorts">
-        <p>Denim</p>
-        <h3>Denim Overall Shorts</h3>
-        <p>$89.00</p>
+        <p class="product-category">Denim</p>
+        <h3 class="product-name">Denim Overall Shorts</h3>
+        <p class="product-price">$89.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/pink-dotted-dress.jpg" alt="Pink Dotted Dress">
-        <p>Dresses</p>
-        <h3>Pink Dotted Dress</h3>
-        <p>$99.00</p>
+        <p class="product-category">Dresses</p>
+        <h3 class="product-name">Pink Dotted Dress</h3>
+        <p class="product-price">$99.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/cotton-blue-shirt.jpg" alt="Cotton Blue Shirt">
-        <p>Shirts</p>
-        <h3>Cotton Blue Shirt</h3>
-        <p>$79.00</p>
+        <p class="product-category">Shirts</p>
+        <h3 class="product-name">Cotton Blue Shirt</h3>
+        <p class="product-price">$79.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/stretch-knit-dress.jpg" alt="Stretch Knit Dress">
-        <p>Dresses</p>
-        <h3>Stretch Knit Dress</h3>
-        <p>$89.00</p>
+        <p class="product-category">Dresses</p>
+        <h3 class="product-name">Stretch Knit Dress</h3>
+        <p class="product-price">$89.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/cotton-yellow-tshirt.jpg" alt="Cotton Yellow T-shirt">
-        <p>Mens</p>
-        <h3>Cotton Yellow T-shirt</h3>
-        <p>$59.00</p>
+        <p class="product-category">Mens</p>
+        <h3 class="product-name">Cotton Yellow T-shirt</h3>
+        <p class="product-price">$59.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="carousel-cell">
         <img src="images/blue-silk-dress.jpg" alt="Blue Silk Dress">
-        <p>Dresses</p>
-        <h3>Blue Silk Dress</h3>
-        <p>$109.00</p>
+        <p class="product-category">Dresses</p>
+        <h3 class="product-name">Blue Silk Dress</h3>
+        <p class="product-price">$109.00</p>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </div>
   </section>
   <!-- NEWSLETTER SIGN-UP -->
-  <section class="sign-up">
+  <section id="updates" class="sign-up">
     <div class="desktop-text-wrapper">
-      <h1><span class="italic-heading">Sign-up for </span>Updates</h1>
+      <h1><span class="italic-heading">Sign-up for </span><strong>Updates</strong></h1>
       <p>Stay updated on our latest product releases, be first to find out about upcoming sales and get free style tips from out blog. Unsubscribe at any time.</p>
     </div>   
       <!-- Sign-up Form -->
-      <form action="" method="post">
+      <form id="email-signup" action="" method="post">
         <div class="email-input-wrapper">
           <input 
-            type="email" 
+            type="text" 
             name="email" 
             id="email"
             placeholder="Your Email">
-          <button type="submit">Subscribe</button>
+          <button id="email-submit" type="submit">Subscribe</button>
         </div>
       </form> 
   </section>
@@ -133,7 +146,7 @@
       <p>604-604-6040. <a href="email:info@alohaapparel.com">info@alohaapparel.com</a></p>
       <p class="light-grey-text">1490 W Broadway <br>Vancouver, BC, Canada</p>
     </div>
-    <!-- Social Link -->
+    <!-- Social Links -->
     <div class="social-links">
       <a href="" target="_self"><i class="fab fa-facebook fa-lg"></i><p>Facebook</p></a>
       <a href="" target="_self"><i class="fab fa-twitter fa-lg"></i><p>Twitter</p></a>
@@ -142,5 +155,9 @@
       <a href="" target="_self"><i class="fab fa-google-plus fa-lg"></i><p>Google+</p></a>
     </div>
   </footer>
+<!--SCRIPTS  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+<script src="js/flickity.pkgd.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
