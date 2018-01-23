@@ -26,7 +26,6 @@ $('.main-carousel').flickity({
   wrapAround: true,
   autoPlay: true,
   prevNextButtons: false,
-  // pageDots: false
 });
 
 //SMOOTH SCROLLING FOR HASH LINKS
@@ -82,17 +81,21 @@ $('#email-signup').on('submit', function(event) {
     alert('Please check your email address and try again.');
 });
 
+
+
 var shoppingCartCount = 0;
 
 // Add to Cart Functionality
 $(".add-to-cart").on("click", function() {
   let shoppingCartBubble = $(".shopping-cart-count-bubble");
 
+  /*Show cart counter if hidden*/
   if( shoppingCartBubble.is(':hidden') ) {
     shoppingCartBubble.show();
     shoppingCartBubble.css("display", "flex");
   }
   
+  /*Increment cart counter*/
   shoppingCartBubble.text( String(++shoppingCartCount) );
 
 });

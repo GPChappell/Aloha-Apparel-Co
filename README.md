@@ -35,6 +35,10 @@ Code Editor Extensions:<br>
 
 ## Testing & Known Issues
 
+### W3C Validation
+HTML5 Valid: https://validator.w3.org/nu/<br>
+CSS3 Valid: https://jigsaw.w3.org/css-validator/validator<br>
+
 ### Tested and working on:
   PC Desktop<br>
     Chrome<br>
