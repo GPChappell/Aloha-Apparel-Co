@@ -41,18 +41,18 @@ CSS3 Valid: https://jigsaw.w3.org/css-validator/validator<br>
 
 ## Tested and working on:
 ### PC Desktop:
-    Chrome<br>
-    Firefox<br>
-    Opera<br>
+    Chrome
+    Firefox
+    Opera
 
 ### Mobile:
-    Android (Chrome)<br>
-    iOS (Safari)<br>
+    Android (Chrome)
+    iOS (Safari)
 
 ## Known Issues:
 ### IE11 (PC Desktop):
     Navigation bar min-height issue distorts contained images<br>
-    Flexbox wrapping not working<br>
+    Flexbox wrapping not working
 
 
 # Author
