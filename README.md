@@ -8,12 +8,12 @@ This is a portfolio project piece developed as part of the Web Developement Prof
 Code Editor: VSCode<br>
 Code Editor Extensions:<br>
   Autoprefixer 2.1.2<br>
-  Beautify 1.1.1<br><br>
+  Beautify 1.1.1<br>
 
 ## HTML5:
   Fundamentals of semantic mark up using HTML5 elements such as Section, Article...<br>
   Use of comments to improve readability<br>
-  Where to include external scripts and how to order according to dependency<br><br>
+  Where to include external scripts and how to order according to dependency<br>
 
 ## CSS3:
   Use of compatibility prefixes for better cross-browser support<br>
@@ -40,6 +40,7 @@ HTML5 Valid: https://validator.w3.org/nu/<br>
 CSS3 Valid: https://jigsaw.w3.org/css-validator/validator<br>
 
 ## Tested and working on:
+
 ### PC Desktop:
     Chrome
     Firefox
@@ -51,7 +52,7 @@ CSS3 Valid: https://jigsaw.w3.org/css-validator/validator<br>
 
 ## Known Issues:
 ### IE11 (PC Desktop):
-    Navigation bar min-height issue distorts contained images<br>
+    Navigation bar min-height issue distorts contained images
     Flexbox wrapping not working
 
 

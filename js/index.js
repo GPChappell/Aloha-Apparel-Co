@@ -1,35 +1,8 @@
-/*****************************
- **NAVIGATION
- *****************************/
-
-//PREVENT FIXED NAVBAR OVERLAPPING OTHER CONTENT
-//Add top margin to second block equal to navbar height.
-var navHeight = $('nav').outerHeight();
-$('header.hero-banner').css('margin-top', navHeight);
-
-//PREVENT FIXED NAVBAR OVERLAPPING OTHER CONTENT
-//Detect navbar height change and update top margin on second block to match.
-$( window ).resize(function() {
-  if( $('nav').outerHeight() != navHeight ) {
-    navHeight = $('nav').css('height');
-    $('header.hero-banner').css('margin-top', navHeight);
-  }
-});
-
-
-//PRODUCT CAROUSEL
-//jQuery plugin: Flickity (https://flickity.metafizzy.co/)
-$('.main-carousel').flickity({
-  // options
-  cellAlign: 'left',
-  contain: true,
-  wrapAround: true,
-  autoPlay: true,
-  prevNextButtons: false,
-});
+/************************************************
+GENERAL
+/************************************************/
 
 //SMOOTH SCROLLING FOR HASH LINKS
-//Source: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -49,7 +22,7 @@ $(document).ready(function(){
       }, 800
       // , function(){
     
-        // Add hash (#) to URL when done scrolling (default click behavior)
+      // Add hash (#) to URL when done scrolling (default click behavior)
       //   window.location.hash = hash;
       // }
     );
@@ -57,15 +30,64 @@ $(document).ready(function(){
   });
 });
 
-//EMAIL SYNTAX VALIDATION
-//https://stackoverflow.com/questions/2507030/email-validation-using-jquery
-function isEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
-}
 
-//NEWSLETTER FORM
-//Email Submit
+
+/************************************************
+ NAVIGATION
+ ************************************************/
+
+//PREVENT FIXED NAVBAR OVERLAPPING OTHER CONTENT
+//Add top margin to offset navbar height
+var navHeight = $('nav').outerHeight();
+$('header.hero-banner').css('margin-top', navHeight);
+
+//Adjust offset when navbar changes height
+$( window ).resize(function() {
+  if( $('nav').outerHeight() != navHeight ) {
+    navHeight = $('nav').css('height');
+    $('header.hero-banner').css('margin-top', navHeight);
+  }
+});
+
+
+
+/************************************************
+ FEATURED PRODUCTS
+ ************************************************/
+
+//INITIALISE PRODUCT CAROUSEL
+$('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  wrapAround: true,
+  autoPlay: true,
+  prevNextButtons: false,
+});
+
+// ADD-TO-CART EVENT
+var shoppingCartCount = 0;
+
+$(".add-to-cart").on("click", function() {
+  let shoppingCartBubble = $(".shopping-cart-count-bubble");
+
+  /*Show cart counter if hidden*/
+  if( shoppingCartBubble.is(':hidden') ) {
+    shoppingCartBubble.show();
+    shoppingCartBubble.css("display", "flex");
+  }
+  
+  /*Increment cart counter*/
+  shoppingCartBubble.text( String(++shoppingCartCount) );
+});
+
+
+
+/************************************************
+ * NEWSLETTER SIGN UP
+ ************************************************/
+
+ //EMAIL SUBMIT EVENT
 $('#email-signup').on('submit', function(event) {
   event.preventDefault(event);
   let submittedEmail = $('#email').val();
@@ -79,23 +101,13 @@ $('#email-signup').on('submit', function(event) {
   isEmail( submittedEmail ) ? 
     alert('Thank you for subscribing!') : 
     alert('Please check your email address and try again.');
-});
-
-
-
-var shoppingCartCount = 0;
-
-// Add to Cart Functionality
-$(".add-to-cart").on("click", function() {
-  let shoppingCartBubble = $(".shopping-cart-count-bubble");
-
-  /*Show cart counter if hidden*/
-  if( shoppingCartBubble.is(':hidden') ) {
-    shoppingCartBubble.show();
-    shoppingCartBubble.css("display", "flex");
-  }
   
-  /*Increment cart counter*/
-  shoppingCartBubble.text( String(++shoppingCartCount) );
-
+  $('#email').val("");
+  
 });
+
+//EMAIL SYNTAX VALIDATION
+function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}

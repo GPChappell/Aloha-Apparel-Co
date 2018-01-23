@@ -1,5 +1,6 @@
-/*GENERAL 
-*********/
+/***********************************************
+GENERAL 
+************************************************/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,8 +22,9 @@ a:hover { color: #b64036; }
 
 /*Max width of desktop content is 1240px*/
 .site-wrapper {
-  max-width: 1240px;
   margin: 0 auto;
+  max-width: 1240px;
+  
 }
 
 /*Typography*/
@@ -67,9 +69,9 @@ p { padding-bottom: 1rem; }
   display: none;
 }
 
-/******************
+/************************************************
 SECTION: NAVIGATION
-******************/
+************************************************/
 .site-nav {
   position: fixed;
   top: 0;
@@ -148,8 +150,8 @@ SECTION: NAVIGATION
 }
 
 .nav-links li a {
-  color: #e2574c;
   padding: 1rem;
+  color: #e2574c;
 }
 
 .nav-links li a:hover {
@@ -180,9 +182,9 @@ SECTION: NAVIGATION
 
 
 
-/**************
+/************************************************
 SECTION: HEADER
-***************/
+*************************************************/
 /* Hero Banner */
 .hero-banner {
   display: -webkit-box;
@@ -220,9 +222,9 @@ SECTION: HEADER
 
 
 
-/************************
+/************************************************
 SECTION: PRODUCT CATEGORY
-*************************/
+*************************************************/
 .gallery-title-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,14 +290,13 @@ SECTION: PRODUCT CATEGORY
 }
 
 .gallery-item a {
-  color: white;
   font-size: 6vw;
-  font-weight: 500;
+  font-weight: 500;  
   text-shadow: 2px 2px 3px #666;
-  
+  color: white; 
 }
 
-/*Remove selected white borders on product category gallery tile to match visual design*/
+/*Set White Borders on Gallery Tiles*/
 .gallery-item:first-of-type {
   border-top: none;
 }
@@ -322,9 +323,9 @@ SECTION: PRODUCT CATEGORY
 
 
 
-/************************
+/************************************************
 SECTION: FEATURED PRODUCTS
-*************************/
+*************************************************/
 .featured-products {
   padding: 4rem 0;
 }
@@ -343,54 +344,53 @@ SECTION: FEATURED PRODUCTS
 }
 
 /*Product Carousel: (Flickity)*/
-/*Source: https://flickity.metafizzy.co/ */
 .carousel-cell {
-  text-align: center;
-  padding: 3rem 2rem;
   width: 100%;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
 .product-category {
   padding: 0;
   margin-bottom: 1rem;
-  color:#969696;
   font-size: 0.75rem;
-  text-transform: uppercase;
   font-weight: 500;
+  text-transform: uppercase;
+  color:#969696;
 }
 
 .product-name {
   padding: 0;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
   line-height: 1;
   color: #e2574c;
-  font-size: 1.5rem;
 }
 
 .product-price {
   padding: 0;
   margin-bottom: 1rem;
-  color:#969696;
   font-weight: 500;
+  color:#969696;
 }
 
 .add-to-cart {
   width: 100px;
-  border-radius: 25px;
   padding: 0.45rem 1rem;
+  border-radius: 25px;
+  border: none;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  border: none;
-  background: #242424;
   color: white;
+  background: #242424;
 }
 
 
 
-/****************************
+/************************************************
 /*SECTION: NEWSLETTER SIGN UP
-*****************************/
+*************************************************/
 .sign-up {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,14 +405,14 @@ SECTION: FEATURED PRODUCTS
       -ms-flex-align: center;
           align-items: center;
   padding: 3rem 1rem;
+  color: white;
+  text-align: center;
   background: 
   -webkit-gradient(linear,left top, left bottom,color-stop(0, rgba(0,0,0,.15)),to(rgba(0,0,0,.15))),
     url('../images/wave-bkgd.jpg') bottom;
   background: 
   linear-gradient(180deg,rgba(0,0,0,.15) 0,rgba(0,0,0,.15)),
     url('../images/wave-bkgd.jpg') bottom;
-  color: white;
-  text-align: center;
 }
 
 .sign-up h1 {
@@ -438,14 +438,14 @@ input[id="email"] {
   padding: 0.5rem 1rem;
   border-radius: 50px;
   border: 5px solid white;
-  background: #e2574c;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 1rem;
   color: white;
+  background: #e2574c;
 }
 
 button:hover {
-  background: #e2574c;
+  background: #a13e36;
 }
 
 .email-input-wrapper {
@@ -463,9 +463,9 @@ button:hover {
 
 
 
-/**************
+/************************************************
 SECTION: FOOTER
-***************/
+*************************************************/
 .site-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,9 +507,9 @@ SECTION: FOOTER
 }
 
 .address-details {
-  color: white;
   font-family: 'Playfair Display', Helvetica, sans-serif;
   line-height: 1.5;
+  color: white;
   text-align: center;
 }
 
@@ -529,9 +529,9 @@ SECTION: FOOTER
 
 
 
-/********************
+/************************************************
 /* RESPONSIVE STYLING
-*********************/
+*************************************************/
 
 /*TABLET
 *********/
@@ -568,8 +568,8 @@ SECTION: FOOTER
   }
 
   .nav-links li {
-    font-size: 0.85rem;
     padding: 0.25rem 0;
+    font-size: 0.85rem;
   }
 
   .nav-links li a {
@@ -588,8 +588,8 @@ SECTION: FOOTER
         -ms-flex-order: 2;
             order: 2;
     width: auto;
-    margin: 0;
     border: none;
+    margin: 0;
   }
 
   .shopping-cart-icon-wrapper {
