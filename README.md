@@ -1,6 +1,8 @@
 # Aloha Apparel Co. Website
 
-Static website for Aloha Apparel Co. build in HTML5, CSS3, JavaScript and jQuery.<br>
+![alt text](./screenshot.png "Aloha Apparel Co. website")
+
+Static website for Aloha Apparel Co. built in HTML5, CSS3, JavaScript and jQuery.<br>
 This is a portfolio project piece developed as part of the Web Developement Professional course I am completing at RED Academy Vancouver in Q1 2018. It is a static website for a fictional clothing brand called Aloha Apparel Co.
 
 # Technologies Used & Key Learnings

@@ -20,11 +20,6 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top - navHeight
       }, 800
-      // , function(){
-    
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      //   window.location.hash = hash;
-      // }
     );
     } // End if
   });
@@ -36,12 +31,11 @@ $(document).ready(function(){
  NAVIGATION
  ************************************************/
 
-//PREVENT FIXED NAVBAR OVERLAPPING OTHER CONTENT
-//Add top margin to offset navbar height
+//PREVENT FIXED NAVBAR OVERLAPPING CONTENT AREA ON PAGE LOAD
 var navHeight = $('nav').outerHeight();
-$('header.hero-banner').css('margin-top', navHeight);
+$('header.hero-banner').css('margin-top', navHeight); //Add top margin to content area so nav bar doesn't overlap
 
-//Adjust offset when navbar changes height
+//Adjust content area offset whenever navbar changes height
 $( window ).resize(function() {
   if( $('nav').outerHeight() != navHeight ) {
     navHeight = $('nav').css('height');
@@ -57,7 +51,6 @@ $( window ).resize(function() {
 
 //INITIALISE PRODUCT CAROUSEL
 $('.main-carousel').flickity({
-  // options
   cellAlign: 'left',
   contain: true,
   wrapAround: true,
@@ -101,9 +94,7 @@ $('#email-signup').on('submit', function(event) {
   isEmail( submittedEmail ) ? 
     alert('Thank you for subscribing!') : 
     alert('Please check your email address and try again.');
-  
-  $('#email').val("");
-  
+    $('#email').val("");
 });
 
 //EMAIL SYNTAX VALIDATION
